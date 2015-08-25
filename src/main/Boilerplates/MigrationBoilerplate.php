@@ -155,7 +155,7 @@ class MigrationBoilerplate extends ExportingBoilerplate
             }
         }
 
-        $template = Storage::get('export/migration.txt');
+        $template = file_get_contents(__DIR__ . '/templates/migration.txt');
         $template = str_replace('{{name}}', 'Create' . camel_case($this->connection) . 'Database', $template);
         $template = str_replace('{{up}}', $up->build(), $template);
         $template = str_replace('{{down}}', $down->build(), $template);

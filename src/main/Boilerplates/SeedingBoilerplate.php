@@ -152,7 +152,7 @@ class SeedingBoilerplate extends ExportingBoilerplate
      */
     public function render()
     {
-        $template = Storage::get('/export/seed.txt');
+        $template = file_get_contents(__DIR__ . '/templates/seed.txt');
         $template = str_replace('{{className}}', camel_case($this->connection) . 'TableSeeder', $template);
         $template = str_replace('{{run}}', $this->records->build(), $template);
         return $template;

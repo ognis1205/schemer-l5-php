@@ -22,7 +22,7 @@ trait RecordParser
      * @param  callable $translate the translation function.
      * @return string              the resulting PHP style array element.
      */
-    public function parse(&$key, &$value, callable $translate=Dictionary::$identity)
+    public function parse(&$key, &$value, callable $translate=Dictionary::identity)
     {
         return $this->_pairwise($translate($key), $value);
     }

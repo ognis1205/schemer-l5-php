@@ -17,7 +17,7 @@ class Dictionary
      * Holds the identity mapping.
      * @var array
      */
-    public static $identity = function($key) {
+    public static function identity($key) {
         return $key;
     }
 
@@ -60,7 +60,7 @@ class Dictionary
                 return $dictionary[$key] ?: $key;
             }
         } else {
-            return self::$identity;
+            return self::identity;
         }
     }
 }
