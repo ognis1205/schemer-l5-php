@@ -1,7 +1,8 @@
-# Yet Another Laravel Caching Service
+# Schemer Package Enables You agile DB migrations
 
-Yet Another Laravel Caching, a.k.a., YACache is a package to extend Laravel 5's base caching
-functionality.
+Schemer is a package to extend Laravel 5's basic fucntionality of DB migration.
 
-This yet another chaching service implementation enables full support of Eloquent ORM caching,
-i.e., you can cache Eloquent models without loss of relationship imformations.
+All functionalities of this package are provided as CLI, hence, once you configure
+the DB connections of your application, just run migration commands, then you can
+get migration scripts written in PHP, implemented based on "Schema" and "DB"
+facades of Laravel5.
