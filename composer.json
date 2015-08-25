@@ -1,0 +1,24 @@
+{
+    "name": "sokawa/schemer",
+    "description": "Simple schema generater.",
+    "minimum-stability": "dev",
+    "keywords": [
+	"sql",
+	"laravel"
+    ],
+    "authors": [
+	{
+	    "name": "Shingo OKAWA",
+	    "email": "shingo.okawa.n.a@gmail.com"
+	}
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "4.*|5.*"
+    },
+    "autoload": {
+	"psr-4": {
+	    "SOkawa\\Batch\\Support\\": "src/main/",
+	}
+    }
+}
