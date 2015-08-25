@@ -35,8 +35,11 @@ trait SchemaParser
      * @param  callable $translate the translation function.
      * @return array
      */
-    public function parse(&$line, callable $translate=Dictionary::identity)
+    public function parse(&$line, callable $translate=NULL)
     {
+        if ($translate == NULL || !is_callable($translate)) {
+            $translate = Dictionary::identity
+        }
         $context = $this->_contextize($line);
 
         switch ($context['type']) {
@@ -135,7 +138,7 @@ trait SchemaParser
      * @param mixed    $context
      * @param callable $translate the translation function.
      */
-    private function _clausify($context, callable $translate=Dictionary::identity)
+    private function _clausify($context, callable $translate)
     {
         $rendered = '$' . 'table->' . $context['method'];
         $rendered .= '(';
